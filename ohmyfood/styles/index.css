@@ -91,4 +91,98 @@ header h1 {
 }
 .step__items__item .step__icon {
   margin-right: 10px;
+}
+
+.restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAFAFA;
+}
+.restaurants .container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+.restaurants .container .restaurants__title {
+  margin-top: 10px;
+}
+.restaurants .container .cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+}
+.restaurants .container .cards .card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+.restaurants .container .cards .card__img {
+  height: 12rem;
+  width: 100%;
+  border: 0px solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants .container .cards .card__badge {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.restaurants .container .cards .card__footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.restaurants .container .cards .card__content {
+  flex: 1;
+}
+.restaurants .container .cards .card__title {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer .container .footer__logo {
+  color: white;
+  font-family: Shrikhand, sans-serif, "cursive";
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer .container .footer__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .container .footer__items .footer__items__item:first-child {
+  margin-top: 0;
+}
+.footer .container .footer__items .footer__items__item {
+  margin: 0.5rem 0;
+}
+.footer .container .footer__items .footer__link {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */

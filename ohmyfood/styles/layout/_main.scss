@@ -68,4 +68,97 @@
     }
 }
 
+.restaurants {
+    @include center;
+    background: $color-bg-lightgrey;
+    .container {
+        max-width: 1280px;
+        margin: auto;
+        position: relative;
+        .restaurants__title {
+            margin-top:10px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 2rem;
+            row-gap: 2rem;
+           
+            .card {
+                background-color: white;
+                border-radius: 1rem;
+                position: relative;
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+                transition: 0.2s;
+            }
+            .card__img {
+                height: 12rem;
+                width: 100%;
+                border:0px solid transparent;
+                border-radius: 1rem 1rem 0 0;
+                box-shadow: none;
+                object-fit: cover;
+            }
+            .card__badge {
+                background-color: $color-tertiary;
+                color: #1b6150;
+                padding: 0.5rem;
+                border-radius: 0.125rem;
+                position: absolute;
+                top: 1rem;
+                right: 0.75rem;
+            }
+            .card__footer {
+                padding: 1rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            .card__content {
+                flex: 1;
+            }
+            .card__title {
+                margin: 0;
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #353535;
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        .footer__logo{
+            color: white;
+            font-family: $font-title-logo, "cursive";
+            margin: 0;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .footer__items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            .footer__items__item:first-child {
+                margin-top: 0;
+            }
+            .footer__items__item {
+                margin: 0.5rem 0;
+            }
+            .footer__link {
+                color: white;
+                text-decoration: none;
+            }
+
+        }
+    }
+}
+
 
