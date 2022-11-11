@@ -1,0 +1,22 @@
+$font-title-logo: Shrikhand, sans-serif;
+$font-txt: Roboto, sans-serif;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-bg-grey: #F3F3F3;
+$color-bg-lightgrey: #FAFAFA;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a ol li {
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: $font-txt;
+}
+
+  
