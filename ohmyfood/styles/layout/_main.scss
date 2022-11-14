@@ -128,37 +128,6 @@
     }
 }
 
-.footer {
-    background-color: #353535;
-    .container {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        .footer__logo{
-            color: white;
-            font-family: $font-title-logo, "cursive";
-            margin: 0;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        .footer__items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            
-            .footer__items__item:first-child {
-                margin-top: 0;
-            }
-            .footer__items__item {
-                margin: 0.5rem 0;
-            }
-            .footer__link {
-                color: white;
-                text-decoration: none;
-            }
 
-        }
-    }
-}
 
 

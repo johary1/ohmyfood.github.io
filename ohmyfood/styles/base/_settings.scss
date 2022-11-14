@@ -20,4 +20,39 @@ body {
     font-family: $font-txt;
 }
 
+.loader {
+    position: absolute;
+    margin:auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 24px;
+    height: 24px;
+    display: grid;
+    animation: spin 3s infinite;
+    &:before, &:after {
+        content: "";
+        grid-area: 1/1;
+        border: 3.8px solid;
+        border-radius: 50%;
+        border-color: $color-secondary $color-tertiary $color-primary $color-tertiary;
+        mix-blend-mode: darken;
+        animation: spin 3s infinite linear;
+    }
+    &:after {
+        border-color: $color-tertiary $color-secondary $color-tertiary $color-secondary;
+        animation-direction: reverse;
+    }
+    
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+
+
   

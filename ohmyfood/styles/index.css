@@ -7,6 +7,45 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.loader {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  -webkit-animation: spin 3s infinite;
+          animation: spin 3s infinite;
+}
+.loader:before, .loader:after {
+  content: "";
+  grid-area: 1/1;
+  border: 3.8px solid;
+  border-radius: 50%;
+  border-color: #FF79DA #99E2D0 #9356DC #99E2D0;
+  mix-blend-mode: darken;
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+}
+.loader:after {
+  border-color: #99E2D0 #FF79DA #99E2D0 #FF79DA;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -158,6 +197,7 @@ header h1 {
 
 .footer {
   background-color: #353535;
+  margin-top: 50px;
 }
 .footer .container {
   display: flex;
