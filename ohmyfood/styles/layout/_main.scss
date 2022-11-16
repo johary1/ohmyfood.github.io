@@ -1,3 +1,4 @@
+
 .location {
     @include center;
     background-color: $color-bg-grey;
@@ -74,6 +75,7 @@
     .container {
         max-width: 1280px;
         margin: auto;
+        padding-bottom: 50px;
         position: relative;
         .restaurants__title {
             margin-top:10px;
