@@ -1,6 +1,18 @@
 .footer {
     background-color: #353535;
     .container {
+        @media screen and (min-width: 769px) {
+            .footer__logo{
+                display: flex;
+                justify-content: center;
+                
+            }
+            .footer__items {
+                @include center;
+                gap: 30px;
+                
+            }  
+        }
         display: flex;
         flex-direction: column;
         padding: 1rem;
@@ -15,10 +27,6 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            
-            .footer__items__item:first-child {
-                margin-top: 0;
-            }
             .footer__items__item {
                 margin: 0.5rem 0;
             }

@@ -18,7 +18,7 @@
     ></script>
   </head>
   <body>
-    <header class="header header--pourmenupage">
+    <header class="header--pourmenupage">
       <div class="restaurantContainer">
         <a href="../index.html"
           ><i class="fas fa-arrow-left header__previous"></i
@@ -34,18 +34,38 @@
     />
     <!-- changer positionnement image -->
     <main class="menu container">
-      <header class="menu__header">
-        <h2 class="menu__title">A la française</h2>
-        <button class="menu__btn">
-          <i class="menu__like menu__like--noBg far fa-heart fa-2x"></i>
-          <i class="menu__like menu__like--bg fas fa-heart fa-2x"></i>
-        </button>
-      </header>
+      <div class="menu__header__wraper">
+        <div class="menu__header">
+          <h2 class="menu__title">A la française</h2>
+          <div class="icon">
+            <svg
+              class="heart-main"
+              viewBox="0 0 512 512"
+              width="30"
+              title="heart"
+            >
+              <path
+                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+              />
+            </svg>
+            <svg
+              class="heart-background"
+              viewBox="0 0 512 512"
+              width="30"
+              title="heart"
+            >
+              <path
+                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
 
       <div class="submenus">
         <section class="submenu">
           <h3 class="submenu__title">Entrées</h3>
-          <section class="menuItem delay-0">
+          <div class="menuItem delay-0">
             <header class="menuItem__header">
               <h4 class="menuItem__title">Tartare de poulpe acidulé</h4>
               <p class="menuItem__description">Aux zests d'orange</p>
@@ -56,9 +76,9 @@
                 <i class="menuItem__icon fas fa-check"></i>
               </div>
             </div>
-          </section>
+          </div>
 
-          <section class="menuItem delay-1">
+          <div class="menuItem delay-1">
             <header class="menuItem__header">
               <h4 class="menuItem__title">Velouté de légumes d'antan</h4>
               <p class="menuItem__description">Carotte, panais, topinambour</p>
@@ -69,9 +89,9 @@
                 <i class="menuItem__icon fas fa-check"></i>
               </div>
             </div>
-          </section>
+          </div>
 
-          <section class="menuItem delay-2">
+          <div class="menuItem delay-2">
             <header class="menuItem__header">
               <h4 class="menuItem__title">Soupe à l'oignon</h4>
               <p class="menuItem__description">Revisité</p>
@@ -82,12 +102,12 @@
                 <i class="menuItem__icon fas fa-check"></i>
               </div>
             </div>
-          </section>
+          </div>
         </section>
 
         <section class="submenu">
           <h3 class="submenu__title">Plats</h3>
-          <section class="menuItem delay-3">
+          <div class="menuItem delay-3">
             <header class="menuItem__header">
               <h4 class="menuItem__title">Coquilles Saint-Jacques</h4>
               <p class="menuItem__description">
@@ -100,9 +120,9 @@
                 <i class="menuItem__icon fas fa-check"></i>
               </div>
             </div>
-          </section>
+          </div>
 
-          <section class="menuItem delay-4">
+          <div class="menuItem delay-4">
             <header class="menuItem__header">
               <h4 class="menuItem__title">Magret de canard</h4>
               <p class="menuItem__description">
@@ -115,9 +135,9 @@
                 <i class="menuItem__icon fas fa-check"></i>
               </div>
             </div>
-          </section>
+          </div>
 
-          <section class="menuItem delay-5">
+          <div class="menuItem delay-5">
             <header class="menuItem__header">
               <h4 class="menuItem__title">Pigeonneau d'Ille-et-Vilaine</h4>
               <p class="menuItem__description">
@@ -130,7 +150,7 @@
                 <i class="menuItem__icon fas fa-check"></i>
               </div>
             </div>
-          </section>
+          </div>
         </section>
 
         <section class="submenu">
