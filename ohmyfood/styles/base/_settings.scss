@@ -1,118 +1,131 @@
 $font-title-logo: Shrikhand, sans-serif;
 $font-txt: Roboto, sans-serif;
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$color-bg-grey: #F3F3F3;
-$color-bg-lightgrey: #FAFAFA;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-bg-grey: #f3f3f3;
+$color-bg-lightgrey: #fafafa;
 
 @mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @mixin shadowElement {
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
 }
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a ol li {
-    text-decoration: none;
-    list-style: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 ul {
-    margin-block: 0;
+  margin-block: 0;
 }
 
-  
 body {
-    font-family: $font-txt;
+  font-family: $font-txt;
 }
 
-.icon {
+.heart__icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 5;
+  cursor: pointer;
+  position: relative;
+
+  svg {
+    overflow: visible;
+    width: 30px;
+  }
+
+  path {
+    stroke-dashoffset: 0;
+    transform-origin: center;
+  }
+
+  .heart-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+
+  .heart-main:hover path {
+    animation: stroke-animation 0.4s ease-in-out forwards;
+  }
+
+  .heart-main:hover ~ .heart-background path {
+    animation: fade-animation 0.4s ease-in-out forwards;
+    stroke: none;
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 155;
+  }
+  60% {
+    stroke-dashoffset: 310;
     fill: transparent;
-    stroke: lightgrey;
-    stroke-width: 5;
-    cursor: pointer;
-    position: relative;
-  
-    svg {
-      overflow: visible;
-      width: 30px;
-    }
-  
-    path {
-      stroke-dashoffset: 0;
-      transform-origin: center;
-    }
-  
-    .heart-background {
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      stroke: none;
-    }
-  
-    .heart-main:hover path {
-      animation: stroke-animation 2s ease-in-out forwards;
-    }
-  
-    .heart-main:hover ~ .heart-background path {
-      animation: fade-animation 2s ease-in-out forwards;
-    }
+    transform: scale(1);
   }
-  
-  @keyframes stroke-animation {
-    0% {
-      stroke-dashoffset: 0;
-    }
-    30% {
-      stroke-dashoffset: 155;
-    }
-    60% {
-      stroke-dashoffset: 310;
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: $color-secondary;
-      transform: scale(1.1);
-    }
-    90% {
-      transform: scale(1);
-    }
-    100% {
-      stroke-dashoffset: 310;
-      fill: $color-secondary;
+  80% {
+    fill: $color-secondary;
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 310;
+    fill: $color-secondary;
   }
 }
-  
-  @keyframes fade-animation {
-    70% {
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: $color-secondary;
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(2.5);
-      opacity: 0;
-    }
+
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
   }
+  80% {
+    fill: $color-secondary;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
 
+.btn__component {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin-top: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  background: linear-gradient(180deg, $color-secondary 0%, $color-primary 90%);
+  &:hover {
+    @include shadowElement;
 
-
-
-
-  
+    /*transition: 1s ease-in-out;*/
+    background-color: white;
+  }
+}
