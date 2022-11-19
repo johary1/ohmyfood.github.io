@@ -79,14 +79,13 @@
 .submenu {
   max-width: 100%;
   overflow: hidden;
-  padding: 8rem 1rem;
+  padding: 2rem 2rem;
   background: #f3f3f3;
 }
 .submenu__title {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
-  margin: -75px 0;
   font-weight: normal;
   &:after {
     content: "";
@@ -99,7 +98,7 @@
   }
 }
 .menuItem {
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   background: white;
   border-radius: 0.75rem;
@@ -107,8 +106,12 @@
   box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
   overflow: hidden;
   cursor: pointer;
-  animation: itemDisplay 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  transform: scale(0);
+  /*animation: itemDisplay 0.6s cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  transform: scale(0.7);*/
+  animation: itemDisplay 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
+
   max-width: 100%;
   &__header {
     white-space: nowrap;
@@ -185,7 +188,7 @@
 $delays: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
 @each $delay in $delays {
   .delay-#{$delay} {
-    animation-delay: #{$delay}+ s;
+    animation-delay: #{$delay/2}+ s;
   }
 }
 
@@ -202,12 +205,12 @@ $delays: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
 
 @keyframes itemDisplay {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    opacity: 0;
+    transform: scale(0.5, 0.5);
   }
 
   100% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+    opacity: 1;
+    transform: scale(1, 1);
   }
 }

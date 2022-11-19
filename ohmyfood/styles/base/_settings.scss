@@ -19,11 +19,6 @@ $color-bg-lightgrey: #fafafa;
   padding: 0;
 }
 
-a ol li {
-  text-decoration: none;
-  list-style: none;
-}
-
 ul {
   margin-block: 0;
 }
@@ -116,7 +111,6 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 1rem;
-  margin-top: 50px;
   border-radius: 30px;
   cursor: pointer;
   transition-duration: 0.25s;
