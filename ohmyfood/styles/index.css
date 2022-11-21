@@ -142,7 +142,8 @@ body {
 .btn__component:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
   /*transition: 1s ease-in-out;*/
-  background-color: white;
+  /*background-color: white;*/
+  background: linear-gradient(180deg, #ff79da 5%, #9356dc 70%);
 }
 
 .header {
@@ -585,8 +586,19 @@ body {
 }
 
 .submenus {
-  display: grid;
   background: #f3f3f3;
+}
+@media screen and (min-width: 991px) {
+  .submenus {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .submenus {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .submenu {
@@ -621,8 +633,6 @@ body {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  /*animation: itemDisplay 0.6s cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  transform: scale(0.7);*/
   -webkit-animation: itemDisplay 0.6s;
           animation: itemDisplay 0.6s;
   -webkit-animation-fill-mode: both;

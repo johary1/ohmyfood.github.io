@@ -73,7 +73,15 @@
 }
 
 .submenus {
-  display: grid;
+  @media screen and (min-width: 991px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   background: #f3f3f3;
 }
 .submenu {
@@ -106,8 +114,6 @@
   box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
   overflow: hidden;
   cursor: pointer;
-  /*animation: itemDisplay 0.6s cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  transform: scale(0.7);*/
   animation: itemDisplay 0.6s;
   animation-fill-mode: both;
   animation-timing-function: 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;

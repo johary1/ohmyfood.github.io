@@ -120,6 +120,11 @@ body {
     @include shadowElement;
 
     /*transition: 1s ease-in-out;*/
-    background-color: white;
+    /*background-color: white;*/
+    background: linear-gradient(
+      180deg,
+      $color-secondary 5%,
+      $color-primary 70%
+    );
   }
 }
