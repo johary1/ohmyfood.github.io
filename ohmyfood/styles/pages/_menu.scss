@@ -73,11 +73,6 @@
 }
 
 .submenus {
-  @media screen and (min-width: 991px) {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   @media screen and (min-width: 992px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

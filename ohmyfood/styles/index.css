@@ -141,9 +141,8 @@ body {
 }
 .btn__component:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-  /*transition: 1s ease-in-out;*/
-  /*background-color: white;*/
-  background: linear-gradient(180deg, #ff79da 5%, #9356dc 70%);
+  transition: 1s ease-in-out;
+  filter: brightness(105%);
 }
 
 .header {
@@ -466,6 +465,9 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   transition: 0.2s;
 }
+.restaurants .container .cards .card:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
 .restaurants .container .cards .card__img {
   height: 12rem;
   width: 100%;
@@ -587,12 +589,6 @@ body {
 
 .submenus {
   background: #f3f3f3;
-}
-@media screen and (min-width: 991px) {
-  .submenus {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
 }
 @media screen and (min-width: 992px) {
   .submenus {
