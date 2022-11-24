@@ -47,33 +47,9 @@
   max-width: 1280px;
   margin: -4rem auto 0 auto;
 }
-.menu__btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  background-color: black;
-  &:before {
-    opacity: 0;
-    transition: 0.5s;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  }
-}
 
 .submenus {
-  @media screen and (min-width: 992px) {
+  @include devices(desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -185,7 +161,7 @@
     color: $color-tertiary;
   }
 }
-
+// loop for adding delay class for each menu item
 $delays: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
 @each $delay in $delays {
   .delay-#{$delay} {

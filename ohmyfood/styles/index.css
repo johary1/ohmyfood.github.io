@@ -161,7 +161,7 @@ body {
   flex-direction: column;
   padding: 1rem;
 }
-@media screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) {
   .footer .footer__container .footer__logo {
     display: flex;
     justify-content: center;
@@ -191,6 +191,9 @@ body {
 .footer .footer__container .footer__items .footer__link {
   color: white;
   text-decoration: none;
+}
+.footer .footer__container .footer__items .footer__link i {
+  margin-right: 10px;
 }
 
 .loaderWrap {
@@ -392,6 +395,18 @@ body {
   list-style: none;
   counter-reset: compteListe;
 }
+@media only screen and (min-width: 769px) {
+  .step__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  .step__items .step__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .step__items__item {
   padding: 1.5rem;
@@ -448,7 +463,7 @@ body {
        column-gap: 2rem;
   row-gap: 2rem;
 }
-@media screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) {
   .restaurants .container .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -500,19 +515,6 @@ body {
   margin-bottom: 0.25rem;
 }
 
-@media screen and (min-width: 769px) {
-  .step__items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-  .step__items .step__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 .header--pourmenupage {
   position: relative;
 }
@@ -562,35 +564,10 @@ body {
   margin: -4rem auto 0 auto;
 }
 
-.menu__btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  background-color: black;
-}
-.menu__btn:before {
-  opacity: 0;
-  transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-}
-
 .submenus {
   background: #f3f3f3;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .submenus {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

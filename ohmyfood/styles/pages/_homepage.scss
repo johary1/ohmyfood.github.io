@@ -144,6 +144,14 @@
   }
 }
 .step__items {
+  @include devices(tablet-up) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    .step__title {
+      @include center;
+    }
+  }
   margin: 0;
   padding: 0;
   list-style: none;
@@ -194,7 +202,7 @@
       margin: 20px auto;
     }
     .cards {
-      @media screen and (min-width: 769px) {
+      @include devices(tablet-up) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
@@ -247,17 +255,6 @@
         margin: 0;
         margin-bottom: 0.25rem;
       }
-    }
-  }
-}
-
-.step__items {
-  @media screen and (min-width: 769px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    .step__title {
-      @include center;
     }
   }
 }
