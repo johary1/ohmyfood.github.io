@@ -1,0 +1,17 @@
+.btn__component {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+  background: linear-gradient(180deg, $color-secondary 0%, $color-primary 90%);
+  &:hover {
+    @include shadowElement;
+    transition: 1s ease-in-out;
+    filter: brightness(105%);
+  }
+}
