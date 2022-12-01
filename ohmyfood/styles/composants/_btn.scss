@@ -12,6 +12,10 @@
   &:hover {
     @include shadowElement;
     transition: 1s ease-in-out;
-    filter: brightness(105%);
+    background: linear-gradient(
+      180deg,
+      rgba(119, 44, 232, 0.68) 11.5%,
+      rgb(119, 44, 232) 91.2%
+    );
   }
 }
