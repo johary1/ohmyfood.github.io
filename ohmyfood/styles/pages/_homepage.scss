@@ -182,6 +182,10 @@
   }
   &:hover {
     @include shadowElement;
+    background: linear-gradient(#cd9cf2 0%, #f6f3ff 100%);
+    .step__icon {
+      color: $color-primary;
+    }
   }
   .step__icon {
     margin-right: 10px;

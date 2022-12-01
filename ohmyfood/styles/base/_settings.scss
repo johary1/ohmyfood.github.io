@@ -76,7 +76,7 @@ body {
     transform: scale(1);
   }
   80% {
-    fill: $color-secondary;
+    fill: $color-primary;
     transform: scale(1.1);
   }
   90% {
@@ -84,7 +84,7 @@ body {
   }
   100% {
     stroke-dashoffset: 310;
-    fill: $color-secondary;
+    fill: $color-primary;
   }
 }
 
@@ -94,7 +94,7 @@ body {
     transform: scale(1);
   }
   80% {
-    fill: $color-secondary;
+    fill: $color-primary;
     transform: scale(1.1);
     opacity: 1;
   }
